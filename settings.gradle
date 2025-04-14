@@ -1,0 +1,3 @@
+rootProject.name = 'asmTools'
+include 'testTarget'
+

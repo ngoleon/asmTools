@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group = 'your.group.id'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Lombok
+    compileOnly 'org.projectlombok:lombok:1.18.26'
+    annotationProcessor 'org.projectlombok:lombok:1.18.26'
+
+    // ASM
+    implementation 'org.ow2.asm:asm:9.6'
+    implementation 'org.ow2.asm:asm-tree:9.6'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17) // or whatever you use
+    }
+}
